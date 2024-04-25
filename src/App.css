@@ -42,3 +42,11 @@ body[data-aos-delay='6100'] [data-aos], [data-aos][data-aos][data-aos-delay='610
   body[data-aos-delay='6300'] [data-aos], [data-aos][data-aos][data-aos-delay='6300']{
             transition-delay: 6300ms;
             }
+
+ .footer-background{
+              background-image: url("https://i.ibb.co/gW3vffR/malaysia-1864676-1280.jpg");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-attachment: fixed;
+          }
