@@ -1,7 +1,11 @@
+import Banner from "../Homecomponents/Banner";
+import BelowBanner from "../Homecomponents/BelowBanner";
+
 const Home = () => {
     return (
         <div>
-            This is home
+            <Banner />
+            <BelowBanner />
         </div>
     );
 };
