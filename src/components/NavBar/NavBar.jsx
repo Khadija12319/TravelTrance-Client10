@@ -1,3 +1,4 @@
+import { GiTripwire } from "react-icons/gi";
 const NavBar = () => {
     const navmid=<>
         <li><a>Home</a></li>
@@ -8,7 +9,7 @@ const NavBar = () => {
         <div>
             <div>
                 <div>
-                <div className="navbar bg-base-100">
+                <div className="navbar px-20">
                 <div className="navbar-start">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,7 +21,7 @@ const NavBar = () => {
                        } 
                     </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="text-4xl flex items-center font-montserrat font-extrabold leading-[60px]">Trave<span><GiTripwire className="text-orange-600"/></span>Trance</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
