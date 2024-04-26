@@ -12,6 +12,7 @@ import Register from './components/Register/Register.jsx';
 import Context from './components/Context/Context.jsx';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 import User from './components/User/User.jsx';
+import AddSpot from './components/AddSpot/AddSpot.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path:"/user",
         element:<PrivateRoute><User></User></PrivateRoute>
       },
+      {
+        path:"/addspot",
+        element:<AddSpot></AddSpot>
+      }
     ]
   },
 ]);

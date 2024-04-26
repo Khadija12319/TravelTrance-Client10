@@ -1,7 +1,6 @@
 import { GiTripwire } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
-import { HiMiniBuildingStorefront } from "react-icons/hi2";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Context/Context";
 import { FaRegUserCircle } from "react-icons/fa";
 import AOS from 'aos';
@@ -15,7 +14,7 @@ const NavBar = () => {
         <li><NavLink to="/touristspots" className={({ isActive }) =>
         isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
         }>Tourist Spots</NavLink></li>
-        <li><NavLink to="/addtouristspot" className={({ isActive }) =>
+        <li><NavLink to="/addspot" className={({ isActive }) =>
         isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
         }>Add Tourist spot</NavLink></li>
         <li><NavLink to="/mylist" className={({ isActive }) =>
