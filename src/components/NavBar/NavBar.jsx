@@ -1,10 +1,61 @@
 import { GiTripwire } from "react-icons/gi";
+import { Link, NavLink } from "react-router-dom";
+import { HiMiniBuildingStorefront } from "react-icons/hi2";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../Context/Context";
+import { FaRegUserCircle } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const NavBar = () => {
     const navmid=<>
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>contact</a></li>
-    </>
+        <li><NavLink to="/" className={({ isActive }) =>
+        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
+        }>Home</NavLink></li>
+        <li><NavLink to="/touristspots" className={({ isActive }) =>
+        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
+        }>Tourist Spots</NavLink></li>
+        <li><NavLink to="/addtouristspot" className={({ isActive }) =>
+        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
+        }>Add Tourist spot</NavLink></li>
+        <li><NavLink to="/mylist" className={({ isActive }) =>
+        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
+        }>My List</NavLink></li>
+    </>;
+    const {user, logOut} = useContext(AuthContext);
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+      }
+  const handleSignOut = () =>{
+      logOut()
+      .then()
+      .catch()
+  };
+  const navEnd =<>
+            <div className="relative inline-block text-left">
+            <div>
+            <button type="button" onClick={toggleDropdown} className="inline-flex w-full justify-center gap-x-1.5 bg-white px-3 py-2 text-sm font-semibold text-gray-900 tooltip tooltip-success tooltip-left" id="menu-button" aria-expanded="true" aria-haspopup="true" data-tip={user?.displayName}>
+            { user?.photoURL ? (
+                    <img src={user?.photoURL} className="h-16 w-16 rounded-full" alt="User Profile" />
+                    ) : (
+                    <FaRegUserCircle className="h-16 w-16 text-gray-500" />
+                    )}
+            </button>
+            </div>
+        {
+        isOpen && (<div className="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" data-aos="fade-in" data-aos-duration="1000" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
+        <div className="py-1" role="none">
+            <Link to="/user" className="text-gray-700 block px-4 py-2 text-sm" tabIndex="-1" role="menuitem"  id="menu-item-0">User Profile</Link>
+            <a href="#" className="text-gray-700 block px-4 py-2 text-sm" tabIndex="-1" role="menuitem"  id="menu-item-1">Add Account</a>
+            <a href="#" className="text-gray-700 block px-4 py-2 text-sm" tabIndex="-1" role="menuitem"  id="menu-item-2">Account settings</a>
+            <form>
+            <Link className="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabIndex="-1" id="menu-item-3" onClick={handleSignOut}>Logout</Link>
+            </form>
+        </div>
+        </div>)}
+        </div>
+        </>;
     return (
         <div>
             <div>
@@ -23,6 +74,7 @@ const NavBar = () => {
                     </div>
                     <a className="text-4xl flex items-center font-montserrat font-extrabold leading-[60px]">Trave<span><GiTripwire className="text-orange-600"/></span>Trance</a>
                 </div>
+
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                     {
@@ -30,13 +82,24 @@ const NavBar = () => {
                     }
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Login</a>
-                    <a href="" className="btn">Register</a>
-                </div>
-                </div>
-                </div>
+
+                <div className="navbar-end text-right">
+            {user ? (
+            <div className="navbar-end gap-3 pr-5">
+                {
+                    navEnd}
             </div>
+            ) : (
+            <div className="navbar-end gap-3 space-x-4 font-work-sans flex">
+                <Link to='/login' className="btn text-lg font-medium">Login</Link>
+                <Link to='/register' className="btn text-lg font-medium">Register</Link>
+            </div>
+            )}
+            </div>
+            </div>
+
+            </div>
+        </div>
         </div>
     );
 };
