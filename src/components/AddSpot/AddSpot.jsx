@@ -1,21 +1,26 @@
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 const AddSpot = () => {
-    const handleAddCoffee= e =>{
+    const handleAddSpot= e =>{
         e.preventDefault();
         const form = e.target;
-        
-        const name= form.name.value;
-        const chef=form.chef.value;
-        const supplier=form.supplier.value;
-        const taste=form.taste.value;
-        const category=form.category.value;
-        const details=form.details.value;
+        const countryname= form.countryname.value;
+        const location=form.location.value;
+        const season=form.season.value;
+        const spotname=form.spotname.value;
+        const description=form.description.value;
+        const cost=form.cost.value;
+        const time= form.time.value;
+        const visitor= form.visitor.value;
+        const uname= form.uname.value;
+        const uemail= form.uemail.value;
         const photo= form.photo.value;
 
-        const formdata={name,chef,supplier,taste,category,details,photo};
+        const formdata={countryname,location,season,spotname,description,cost,time,visitor,uname,uemail,photo};
+
+        console.log(formdata);
         
-        fetch('http://localhost:5000/coffee',{
+        fetch('http://localhost:5000/spots',{
             method:"POST",
             headers:{
                 "content-type": "application/json"
@@ -27,31 +32,41 @@ const AddSpot = () => {
             if(data.insertedId){
                 Swal.fire({
                     title: 'Success!',
-                    text: 'You have inserted a coffe details',
+                    text: 'You have inserted a new tourist spot details',
                     icon: 'success',
                     confirmButtonText: 'Ok'
                   })
+                  form.reset();
             }
         })
-    }
+     }
     return (
         <div className="pt-[50px] mb-[110px]">
             <div  className="container mx-auto w-3/5 bg-orange-100 py-[70px] px-[112px]">
                 <h1 className="text-[#374151] text-[45px] font-normal pb-8 text-center font-rancho drop-shadow-lg">Add New Tourist Spot</h1>
                 <p className="text-[#1B1A1A80] text-center font-normal leading-8 text-lg pb-8 font-raleway">Contribute to our travel database by adding new tourist spots through a user-friendly form. Share details like the spots name, location, and description, enriching our collection of exciting destinations. Your input helps create fresh and memorable travel plans for everyone!</p>
-                <form className="space-y-6" onSubmit={handleAddCoffee}>
+                <form className="space-y-6" onSubmit={handleAddSpot}>
 
                     {/* countryname and location */}
                     <div className="flex gap-6 w-full">
                         <div className="flex flex-col gap-4 w-full">
-                                <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">Country Name</label>
-                                <input className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="countryname" id="" placeholder="Enter country name"/>
+                            <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">Country Name</label>
+                            <select className="p-3 rounded-md" name="countryname" id="">
+                                <option>--Please select a country--</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Vietnam">Vietnam</option>
+                                <option value="Cambodia">Cambodia</option>
+                            </select>
                         </div>
                         <div className="flex flex-col gap-4 w-full">
                             <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">Location</label>
-                            <input className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="location" id="" placeholder="Enter location"/>
+                            <input  className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="location" id="" placeholder="Enter location"/>
                         </div>
                     </div>
+        
 
                     {/* season and spotname */}
                     <div className="flex gap-6 w-full">
@@ -118,5 +133,7 @@ const AddSpot = () => {
         </div>
     );
 };
+
+
 
 export default AddSpot;

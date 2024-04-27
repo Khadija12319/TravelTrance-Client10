@@ -20,6 +20,8 @@ const NavBar = () => {
         <li><NavLink to="/mylist" className={({ isActive }) =>
         isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
         }>My List</NavLink></li>
+        <li>
+        </li>
     </>;
     const {user, logOut} = useContext(AuthContext);
     const [isOpen, setIsOpen] = useState(false);

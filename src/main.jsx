@@ -14,6 +14,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 import User from './components/User/User.jsx';
 import AddSpot from './components/AddSpot/AddSpot.jsx';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/addspot",
-        element:<AddSpot></AddSpot>
+        element:<PrivateRoute><AddSpot></AddSpot></PrivateRoute>
       }
     ]
   },
