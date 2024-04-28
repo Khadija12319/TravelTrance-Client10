@@ -15,6 +15,7 @@ import User from './components/User/User.jsx';
 import AddSpot from './components/AddSpot/AddSpot.jsx';
 import MyList from './components/MyList/MyList.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
+import SpotDetails from './components/SpotDetails/SpotDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
         path:'/mylist',
         element:<PrivateRoute><MyList></MyList></PrivateRoute>,
         loader: ()=> fetch('http://localhost:5000/spots')
+      },
+      {
+        path:'/spot/:id',
+        element:<SpotDetails></SpotDetails>,
+        loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
       }
     ]
   },

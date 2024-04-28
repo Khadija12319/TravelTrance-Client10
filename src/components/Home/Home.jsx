@@ -1,6 +1,7 @@
 import Banner from "../Homecomponents/Banner";
 import BelowBanner from "../Homecomponents/BelowBanner";
 import CountryList from "../Homecomponents/CountryList";
+import Spots from "../Spots/Spots";
 
 const Home = () => {
     
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner />
             <CountryList />
             <BelowBanner />
+            <Spots></Spots>
         </div>
     );
 };
