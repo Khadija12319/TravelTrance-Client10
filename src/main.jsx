@@ -13,12 +13,15 @@ import Context from './components/Context/Context.jsx';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 import User from './components/User/User.jsx';
 import AddSpot from './components/AddSpot/AddSpot.jsx';
+import MyList from './components/MyList/MyList.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
@@ -39,6 +42,11 @@ const router = createBrowserRouter([
       {
         path:"/addspot",
         element:<PrivateRoute><AddSpot></AddSpot></PrivateRoute>
+      },
+      {
+        path:'/mylist',
+        element:<PrivateRoute><MyList></MyList></PrivateRoute>,
+        loader: ()=> fetch('http://localhost:5000/spots')
       }
     ]
   },

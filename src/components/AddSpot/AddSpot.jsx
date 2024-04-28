@@ -1,6 +1,9 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../Context/Context';
 
 const AddSpot = () => {
+    const {user} = useContext(AuthContext);
     const handleAddSpot= e =>{
         e.preventDefault();
         const form = e.target;
@@ -110,11 +113,11 @@ const AddSpot = () => {
                     <div className="flex gap-6 w-full">
                         <div className="flex flex-col gap-4 w-full">
                             <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">User Name</label>
-                            <input className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="uname" id="" placeholder="Enter user name"/>
+                            <input className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="uname" id="" placeholder="Enter user name" value={user?.displayName} autoComplete={user?.displayName}/>
                         </div>
                         <div className="flex flex-col gap-4 w-full">
                             <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">User Email</label>
-                            <input className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="uemail" id="" placeholder="Enter user email"/>
+                            <input className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="uemail" id="" value={user?.email} autoComplete={user?.email}/>
                         </div>
                     </div>
 
