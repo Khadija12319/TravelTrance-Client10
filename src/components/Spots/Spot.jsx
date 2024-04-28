@@ -2,6 +2,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { MdCardTravel } from "react-icons/md";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types'; 
 const Spot = ({spot}) => {
     return (
         <div className="border rounded-2xl shadow-md">
@@ -37,5 +38,7 @@ const Spot = ({spot}) => {
         </div>
     );
 };
-
+Spot.propTypes = {
+    spot:PropTypes.object
+}
 export default Spot;
