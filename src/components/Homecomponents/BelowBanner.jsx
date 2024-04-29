@@ -2,8 +2,8 @@ const BelowBanner = () => {
     return (
         <div className="container mx-auto mt-16 mb-16">
             <h3 className="text-center text-3xl font-playfair font-extrabold text-orange-600">Unforgettable Journeys in Asia</h3>
-            <h3 className="text-center py-5 font-montserrat text-black text-6xl font-bold">Experience of Our Travelers</h3>
-            <p className="text-center py-3 font-montserrat font-light text-black text-base leading-9">Step into the captivating tales spun by our adventurers. Each journey is a tapestry of discovery, woven<br /> with moments that linger long after the return. Explore the untold narratives of wanderlust, where every destination becomes a chapter in a travelers memoir. Embrace<br/> the allure of the unknown, for in these expeditions, true treasures lie in the experiences shared.</p>
+            <h3 className="text-center py-5 font-montserrat text-black text-6xl font-bold dark:text-gray-600">Experience of Our Travelers</h3>
+            <p className="text-center py-3 font-montserrat font-light text-black text-base leading-9 dark:text-gray-600">Step into the captivating tales spun by our adventurers. Each journey is a tapestry of discovery, woven<br /> with moments that linger long after the return. Explore the untold narratives of wanderlust, where every destination becomes a chapter in a travelers memoir. Embrace<br/> the allure of the unknown, for in these expeditions, true treasures lie in the experiences shared.</p>
             <div>
             <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-10 flex items-center">
       <div className="-m-1 flex flex-row sm:flex-wrap md:-m-2">

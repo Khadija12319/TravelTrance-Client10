@@ -8,7 +8,7 @@ import "../../App.css";
 const CountryList = () => {
     return (
         <div>
-            <h1 className="text-center font-montserrat font-bold text-6xl leading-[70px] mt-14">Choose your most favourite<br/><span className="text-orange-600">tourist spot</span></h1>
+            <h1 className="text-center font-montserrat font-bold text-6xl leading-[70px] mt-14 text-gray-600">Choose your most favourite<br/><span className="text-orange-600">tourist spot</span></h1>
             <div className="mt-9 footer-background">
             <div className="h-[100%]  bg-black bg-opacity-70">
             <div className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 p-14">

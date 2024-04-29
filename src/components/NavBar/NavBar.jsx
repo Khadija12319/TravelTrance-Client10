@@ -9,20 +9,27 @@ AOS.init();
 const NavBar = () => {
     const navmid=<>
         <li><NavLink to="/" className={({ isActive }) =>
-        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
+        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal dark:bg-transparent'
         }>Home</NavLink></li>
         <li><NavLink to="/touristspots" className={({ isActive }) =>
-        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
+        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal dark:bg-transparent'
         }>Tourist Spots</NavLink></li>
         <li><NavLink to="/addspot" className={({ isActive }) =>
-        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
+        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal dark:bg-transparent'
         }>Add Tourist spot</NavLink></li>
         <li><NavLink to="/mylist" className={({ isActive }) =>
-        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal'
+        isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal dark:bg-transparent'
         }>My List</NavLink></li>
         <li>
         </li>
     </>;
+    const [theme, setTheme] = useState('light');
+    const toggleTheme = () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+        // Update the data-theme attribute of the <html> element
+        document.documentElement.setAttribute('data-theme', newTheme);
+    };
     const {user, logOut} = useContext(AuthContext);
     const [isOpen, setIsOpen] = useState(false);
     const toggleDropdown = () => {
@@ -36,11 +43,11 @@ const NavBar = () => {
   const navEnd =<>
             <div className="relative inline-block text-left">
             <div>
-            <button type="button" onClick={toggleDropdown} className="inline-flex w-full justify-center gap-x-1.5 bg-white px-3 py-2 text-sm font-semibold text-gray-900 tooltip tooltip-success tooltip-left" id="menu-button" aria-expanded="true" aria-haspopup="true" data-tip={user?.displayName}>
+            <button type="button" onClick={toggleDropdown} className="inline-flex w-full justify-center gap-x-1.5 bg-white px-3 py-2 text-sm font-semibold text-gray-900 tooltip tooltip-success tooltip-left dark:bg-transparent" id="menu-button" aria-expanded="true" aria-haspopup="true" data-tip={user?.displayName}>
             { user?.photoURL ? (
-                    <img src={user?.photoURL} className="h-16 w-16 rounded-full" alt="User Profile" />
+                    <img src={user?.photoURL} className="h-16 w-16 rounded-full dark:bg-transparent" alt="User Profile" />
                     ) : (
-                    <FaRegUserCircle className="h-16 w-16 text-gray-500" />
+                    <FaRegUserCircle className="h-16 w-16 text-gray-500 dark:bg-transparent" />
                     )}
             </button>
             </div>
@@ -85,6 +92,7 @@ const NavBar = () => {
                 </div>
 
                 <div className="navbar-end text-right">
+                <input type="checkbox" value="synthwave" className="toggle theme-controller" onClick={toggleTheme}/>
             {user ? (
             <div className="navbar-end gap-3 pr-5">
                 {

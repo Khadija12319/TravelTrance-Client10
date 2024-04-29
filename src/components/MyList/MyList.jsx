@@ -1,12 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import Table from "./Table";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Context/Context";
 
 const MyList = () => {
     const {user} = useContext(AuthContext);
-    const spots = useLoaderData();
-    const filteredSpots = spots.filter(spot => spot.uemail === user.email);
+    const loadedSpots = useLoaderData();
+    const filteredSpots = loadedSpots.filter(spot => spot.uemail === user.email);
+    const [spots, setSpots] = useState(filteredSpots);
     console.log(filteredSpots);
     return (
         <div className="container mx-auto">
@@ -24,7 +25,7 @@ const MyList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredSpots.map(spot => <Table spot={spot} key={spot._id} />)}
+                        {spots.map(spot => <Table spot={spot} key={spot._id} spots={spots} setSpots={setSpots} />)}
                     </tbody>
                 </table>
             </div>
