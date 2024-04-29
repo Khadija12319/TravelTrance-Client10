@@ -96,7 +96,7 @@ const Register = () => {
                 draggable: true,
                 progress: undefined,
                 style: {
-                    backgroundColor: "#40ad92",
+                    backgroundColor: "#DD6B20",
                     color: "#FFF",
                 },
                 bodyClassName: "text-lg",
@@ -105,7 +105,7 @@ const Register = () => {
         };
     return (
         <div>
-            <Helmet><title>TravelTrance | Register</title></Helmet>
+            <Helmet><title>Register</title></Helmet>
             <ToastContainer/>
             <div className="overflow-hidden">
             <div className="mb-20 mt-10">
@@ -113,7 +113,7 @@ const Register = () => {
                 <div className="card shrink-0 w-full" data-aos="flip-down" data-aos-duration="2000">
                 <form className="p-8 lg:w-2/6 md:w-4/5 mx-auto border rounded-lg shadow-md" onSubmit={handleLogin}>
                     <div className="form-control">
-                        <h4 className="text-4xl font-bold text-center text-[#40ad92]">Register Now</h4>
+                        <h4 className="text-4xl font-bold text-center text-[#DD6B20]">Register Now</h4>
                     <label className="label">
                         <span className="label-text text-lg">Full Name</span>
                     </label>
@@ -141,14 +141,14 @@ const Register = () => {
                         registerError && <p className="text-red-500">{registerError}</p>
                     }
                     <label className="label">
-                        <a href="#" className="label-text-alt link link-hover text-lg text-[#40ad92]">Forgot password?</a>
+                        <a href="#" className="label-text-alt link link-hover text-lg text-[#DD6B20]">Forgot password?</a>
                     </label>
                     </div>
                     <div className="form-control mt-6">
-                    <button className="btn bg-[#40ad92] text-white hover:text-black text-xl mb-4">Register</button>
+                    <button className="btn bg-[#DD6B20] text-white hover:text-black text-xl mb-4">Register</button>
                     </div>
                     <div className="mb-4">
-                        <p className="text-center">Already have an account? <Link to='/login' className="text-[#40ad92] underline">Login now</Link></p>
+                        <p className="text-center">Already have an account? <Link to='/login' className="text-[#DD6B20] underline">Login now</Link></p>
                     </div>
                     
                     <div className="mb-4 flex justify-center gap-6">

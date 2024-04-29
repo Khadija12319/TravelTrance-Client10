@@ -17,6 +17,7 @@ import MyList from './components/MyList/MyList.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import SpotDetails from './components/SpotDetails/SpotDetails.jsx';
 import Update from './components/Update/Update.jsx';
+import TouristSpots from './components/TouristSpots/TouristSpots.jsx';
 
 
 const router = createBrowserRouter([
@@ -59,6 +60,11 @@ const router = createBrowserRouter([
         path:'/updatespot/:id',
         element:<Update></Update>,
         loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+      },
+      {
+        path:'/touristspots',
+        element:<TouristSpots></TouristSpots>,
+        loader: ()=> fetch('http://localhost:5000/spots')
       }
     ]
   },

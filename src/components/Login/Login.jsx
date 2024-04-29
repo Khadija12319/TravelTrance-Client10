@@ -72,7 +72,7 @@ const Login = () => {
             draggable: true,
             progress: undefined,
             style: {
-                backgroundColor: "#40ad92",
+                backgroundColor: "#DD6B20",
                 color: "#FFF",
             },
             bodyClassName: "text-lg",
@@ -89,7 +89,7 @@ const Login = () => {
                 <div className="card shrink-0 w-full" data-aos="flip-up" data-aos-duration="2000">
                 <form className="p-8 lg:w-2/6 md:w-4/5 mx-auto border rounded-lg shadow-md" onSubmit={handleLogin}>
                     <div className="form-control">
-                        <h4 className="text-4xl font-bold text-center text-[#40ad92]">Login Form</h4>
+                        <h4 className="text-4xl font-bold text-center text-[#DD6B20]">Login Form</h4>
                     <label className="label">
                         <span className="label-text text-lg">Email</span>
                     </label>
@@ -102,17 +102,17 @@ const Login = () => {
                     <input type={showPassword ? "text" : "password"} name="password" placeholder="password" className="input input-bordered py-7" required />
                     <span onClick={ () => setShowPassword(!showPassword)} className="md:translate-x-[93%] translate-x-[85%] -translate-y-[40px] text-2xl">{showPassword? <IoEyeOff /> : <IoEye/>}</span>
                     <label className="label">
-                        <a href="#" className="label-text-alt link link-hover text-lg text-[#40ad92]">Forgot password?</a>
+                        <a href="#" className="label-text-alt link link-hover text-lg text-[#DD6B20]">Forgot password?</a>
                     </label>
                     </div>
                     <div className="form-control mt-6">
-                    <button className="btn bg-[#40ad92] text-white hover:text-black text-xl mb-4">Login</button>
+                    <button className="btn bg-[#DD6B20] text-white hover:text-black text-xl mb-4">Login</button>
                     {
                         loginError && <p className="text-red-500">{loginError}</p>
                     }
                     </div>
                     <div className="mb-2">
-                        <p className="text-center">Do not have an account? <Link to='/register' className="text-[#40ad92] underline">Register now</Link></p>
+                        <p className="text-center">Do not have an account? <Link to='/register' className="text-[#DD6B20] underline">Register now</Link></p>
                     </div>
                     <div className="flex items-center mb-4">
                         <hr className="flex-grow border-t border-gray-300" />

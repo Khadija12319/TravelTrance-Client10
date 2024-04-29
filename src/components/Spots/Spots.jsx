@@ -13,7 +13,6 @@ const Spots = () => {
         }
     }, [loading]);
 
-    console.log(spots);
     return (
         <div>
             <div className="container mx-auto mb-16">
