@@ -68,7 +68,7 @@ const NavBar = () => {
         <div>
             <div>
                 <div>
-                <div className="navbar md:px-20 flex md:flex-row flex-col">
+                <div className="navbar md:px-20 flex md:flex-row flex-col overflow-hidden">
                 <div className="navbar-start md:w-[50%] w-[100%]">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

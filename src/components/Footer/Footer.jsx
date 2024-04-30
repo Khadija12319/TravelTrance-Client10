@@ -10,11 +10,11 @@ import photo from "../../assets/creditcard-logo.png"
 import moment from 'moment';
 const Footer = () => {
     return (
-        <div>
+        <div className="overflow-hidden">
             <div className="footer-background1 py-10">
                 <div className="container mx-auto my-10">
-                    <div className="mx-14 bg-white py-5 px-6">
-                        <div className="grid grid-cols-3 gap-6">
+                    <div className="md:mx-14 mx-4 bg-white py-5 px-6">
+                        <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
                             <div>
                                 <div className="flex flex-col items-center justify-center px-4">
                                 <a className="text-3xl flex items-center font-montserrat font-bold mt-6">Trave<span><GiTripwire className="text-orange-600"/></span>Trance</a>

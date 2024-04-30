@@ -16,7 +16,7 @@ const Countries = () => {
 
     const word=['Countries','in Bangladesh','in Thailand','in Indonesia','in Malaysia','in Vietnam','in Cambodia'];
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto overflow-hidden">
             <div>
                 <h1 className="text-black text-5xl font-montserrat dark:text-gray-600 text-center font-bold">Trip Available<span className="text-orange-600 font-playfair"> <Typewriter words={word} cursor="true" loop="true"></Typewriter></span></h1>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-12 mb-8">

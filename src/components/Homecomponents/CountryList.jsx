@@ -7,14 +7,14 @@ import { BsGlobeCentralSouthAsia } from "react-icons/bs";
 import "../../App.css";
 const CountryList = () => {
     return (
-        <div>
+        <div className="overflow-hidden">
             <h1 className="text-center font-montserrat font-bold text-6xl leading-[70px] mt-14 text-gray-600">Choose your most favourite<br/><span className="text-orange-600">tourist spot</span></h1>
             <div className="mt-9 footer-background">
             <div className="h-[100%]  bg-black bg-opacity-70">
-            <div className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 p-14">
+            <div className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 md:p-14 p-2 md:pb-0 pb-8">
 
 
-    <div className="flex gap-7 p-8">
+    <div className="flex gap-7 md:p-8">
     <FaGlobeAsia className="text-orange-600 h-36 w-56"/>
     <div>
         <p className="text-white text-2xl font-montserrat font-semibold py-4">01. Asia</p>
@@ -22,7 +22,7 @@ const CountryList = () => {
     </div>
 </div>
 
-<div className="flex gap-7 p-8">
+<div className="flex gap-7 md:p-8">
     <FaGlobeEurope className="text-orange-600 h-36 w-56"/>
     <div>
         <p className="text-white text-2xl font-montserrat font-semibold py-4">02. Europe</p>
@@ -31,7 +31,7 @@ const CountryList = () => {
 </div>
 
 
-<div className="flex gap-7 p-8">
+<div className="flex gap-7 md:p-8">
     <FaEarthAmericas className="text-orange-600 h-36 w-56"/>
     <div>
         <p className="text-white text-2xl font-montserrat font-semibold py-4">03. America</p>
@@ -40,7 +40,7 @@ const CountryList = () => {
 </div>
 
 
-<div className="flex gap-7 p-8">
+<div className="flex gap-7 md:p-8">
     <GiAfrica className="text-orange-600 h-36 w-56"/>
     <div>
         <p className="text-white text-2xl font-montserrat font-semibold py-4">04. Africa</p>
@@ -49,7 +49,7 @@ const CountryList = () => {
 </div>
 
 
-<div className="flex gap-7 p-8">
+<div className="flex gap-7 md:p-8">
     <PiGlobeHemisphereEastFill className="text-orange-600 h-36 w-56"/>
     <div>
         <p className="text-white text-2xl font-montserrat font-semibold py-4">05. Middle East</p>
@@ -58,7 +58,7 @@ const CountryList = () => {
 </div>
 
 
-<div className="flex gap-7 p-8">
+<div className="flex gap-7 md:p-8">
     <BsGlobeCentralSouthAsia className="text-orange-600 h-36 w-56"/>
     <div>
         <p className="text-white text-2xl font-montserrat font-semibold py-4">06. Central Asia</p>

@@ -15,7 +15,7 @@ const Spots = () => {
 
     return (
         <div>
-            <div className="container mx-auto mb-16">
+            <div className="container mx-auto mb-16 overflow-hidden">
                 <h1 className="text-center py-5 font-playfair text-orange-600 text-6xl font-bold leading-[65px]">Popular<br/><span className="text-black text-5xl font-montserrat dark:text-gray-600"> Tourist spots</span></h1>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
                     {loading ? (

@@ -36,7 +36,7 @@ const Banner = () => {
     ];
     
     return (
-        <div className=''>
+        <div className='overflow-hidden'>
             <Swiper
          style={{
             '--swiper-pagination-color': '#FFF',
