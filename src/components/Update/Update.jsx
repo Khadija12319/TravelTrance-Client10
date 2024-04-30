@@ -43,13 +43,13 @@ const Update = () => {
 
     return (
         <div className="pt-[50px] mb-[110px]">
-            <div  className="container mx-auto w-3/5 bg-orange-100 py-[70px] px-[112px]">
+            <div  className="container mx-auto lg:w-3/5 md:w-3/4 bg-orange-100 lg:py-[70px] py-[30px] lg:px-[112px] px-[20px]">
                 <h1 className="text-[#374151] text-[45px] font-normal pb-8 text-center font-rancho drop-shadow-lg">Update Tourist Spot</h1>
                 <p className="text-[#1B1A1A80] text-center font-normal leading-8 text-lg pb-8 font-raleway">Contribute to our travel database by adding new tourist spots through a user-friendly form. Share details like the spots name, location, and description, enriching our collection of exciting destinations. Your input helps create fresh and memorable travel plans for everyone!</p>
                 <form className="space-y-6" onSubmit={handleUpdateSpot}>
 
                     {/* countryname and location */}
-                    <div className="flex gap-6 w-full">
+                    <div className="flex md:flex-row flex-col gap-6 w-full">
                         <div className="flex flex-col gap-4 w-full">
                             <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">Country Name</label>
                             <select className="p-3 rounded-md" name="countryname" id="" defaultValue={countryname}>
@@ -70,7 +70,7 @@ const Update = () => {
         
 
                     {/* season and spotname */}
-                    <div className="flex gap-6 w-full">
+                    <div className="flex md:flex-row flex-col gap-6 w-full">
                         <div className="flex flex-col gap-4 w-full">
                             <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">Seasonality</label>
                             <input defaultValue={season} className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="season" id="" placeholder="Enter season. ex:summer"/>
@@ -83,7 +83,7 @@ const Update = () => {
 
 
                     {/* description and cost */}
-                    <div className="flex gap-6 w-full">
+                    <div className="flex md:flex-row flex-col gap-6 w-full">
                         <div className="flex flex-col gap-4 w-full">
                             <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">Short Description</label>
                             <input defaultValue={description} className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="description" id="" placeholder="Enter a description"/>
@@ -95,7 +95,7 @@ const Update = () => {
                     </div>
 
                     {/* time and visitor */}
-                    <div className="flex gap-6 w-full">
+                    <div className="flex md:flex-row flex-col gap-6 w-full">
                         <div className="flex flex-col gap-4 w-full">
                             <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">Travel Time</label>
                             <input defaultValue={time} className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="text" name="time" id="" placeholder="Enter time .ex: 7 days"/>

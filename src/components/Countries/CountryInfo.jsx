@@ -32,11 +32,11 @@ const CountryInfo = () => {
 
 
     return (
-        <div>
-            <div className="container mx-auto my-12">
+        <div className="overflow-hidden">
+            <div className="container mx-auto my-12 z-0">
                 <div className="mb-10">
                     {
-                        loading?(<span className="loading loading-spinner text-center text-orange-600 mx-auto block"></span>) : (<div className="flex gap-12">
+                        loading?(<span className="loading loading-spinner text-center text-orange-600 mx-auto block"></span>) : (<div className="flex lg:flex-row flex-col gap-12">
                         <div className="flex-1">
                             <img src={countryName.image} alt="" />
                         </div>

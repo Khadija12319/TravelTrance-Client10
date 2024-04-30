@@ -13,7 +13,7 @@ const SpotDetails = () => {
         <div className="mb-16">
             <div>
                 <div className="mb-10">
-                    <img src={spot.photo} alt="" className="h-[720px] w-full"/>
+                    <img src={spot.photo} alt="" className="md:h-[720px] w-full"/>
                 </div>
                 <div className="container mx-auto">
                     <div>
@@ -23,8 +23,8 @@ const SpotDetails = () => {
                     <div>
                         <p className="text-base text-gray-500 pb-8">{spot.description}</p>
                     </div>
-                    <div className="grid lg:grid-cols-3 grid-cols-2 gap-8">
-                        <div className="col-span-2">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+                        <div className="md:col-span-2">
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="flex items-center gap-4">
                                     <IoTimeOutline className="text-2xl text-orange-600"/>

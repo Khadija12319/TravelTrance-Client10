@@ -20,8 +20,6 @@ const NavBar = () => {
         <li><NavLink to="/mylist" className={({ isActive }) =>
         isActive ? 'font-bold text-orange-600 hover:text-orange-600' : 'bg-white font-normal dark:bg-transparent'
         }>My List</NavLink></li>
-        <li>
-        </li>
     </>;
     const [theme, setTheme] = useState('light');
     const toggleTheme = () => {
@@ -41,7 +39,7 @@ const NavBar = () => {
       .catch()
   };
   const navEnd =<>
-            <div className="relative inline-block text-left">
+            <div className="relative inline-block md:text-left">
             <div>
             <button type="button" onClick={toggleDropdown} className="inline-flex w-full justify-center gap-x-1.5 bg-white px-3 py-2 text-sm font-semibold text-gray-900 tooltip tooltip-left dark:bg-transparent" id="menu-button" aria-expanded="true" aria-haspopup="true" data-tip={user?.displayName}>
             { user?.photoURL ? (
@@ -53,12 +51,12 @@ const NavBar = () => {
             </div>
         {
         isOpen && (<div className="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" data-aos="fade-in" data-aos-duration="1000" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
-        <div className="py-1" role="none">
+        <div className="py-1 text-left" role="none">
             <Link to="/user" className="text-gray-700 block px-4 py-2 text-sm" tabIndex="-1" role="menuitem"  id="menu-item-0">User Profile</Link>
             <a href="#" className="text-gray-700 block px-4 py-2 text-sm" tabIndex="-1" role="menuitem"  id="menu-item-1">Add Account</a>
             <a href="#" className="text-gray-700 block px-4 py-2 text-sm" tabIndex="-1" role="menuitem"  id="menu-item-2">Account settings</a>
             <form>
-            <Link className="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabIndex="-1" id="menu-item-3" onClick={handleSignOut}>Logout</Link>
+            <Link className="text-gray-700 block w-full px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-3" onClick={handleSignOut}>Logout</Link>
             </form>
         </div>
         </div>)}
@@ -68,7 +66,7 @@ const NavBar = () => {
         <div>
             <div>
                 <div>
-                <div className="navbar md:px-20 flex md:flex-row flex-col overflow-hidden">
+                <div className="navbar lg:px-20 flex md:flex-row flex-col">
                 <div className="navbar-start md:w-[50%] w-[100%]">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -80,7 +78,7 @@ const NavBar = () => {
                        } 
                     </ul>
                     </div>
-                    <a className="text-4xl flex items-center font-montserrat font-extrabold leading-[60px]">Trave<span><GiTripwire className="text-orange-600"/></span>Trance</a>
+                    <a className="md:text-4xl text-2xl flex items-center font-montserrat font-extrabold leading-[60px]">Trave<span><GiTripwire className="text-orange-600"/></span>Trance</a>
                 </div>
 
                 <div className="navbar-center hidden lg:flex">
@@ -91,8 +89,11 @@ const NavBar = () => {
                     </ul>
                 </div>
 
-                <div className="navbar-end text-right">
-                <input type="checkbox" value="synthwave" className="toggle theme-controller" onClick={toggleTheme}/>
+                <div>
+                <input type="checkbox" value="synthwave" className="toggle theme-controller lg:mr-0 md:mr-8" onClick={toggleTheme}/>
+                </div>
+
+            <div className="navbar-end text-right">
             {user ? (
             <div className="navbar-end gap-3 pr-5">
                 {
