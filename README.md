@@ -44,7 +44,7 @@ Whether you're a seasoned traveler or embarking on your first adventure, let Tra
 
 ## Home Page Screenshots
 
-![https://i.ibb.co/k361Y3W/screencapture-assignment-10-15deb-web-app-2024-04-30-21-35-59.png](https://i.ibb.co/k361Y3W/screencapture-assignment-10-15deb-web-app-2024-04-30-21-35-59.png)
+![](https://i.ibb.co/k361Y3W/screencapture-assignment-10-15deb-web-app-2024-04-30-21-35-59.png)
 
 
 ## Tech Stack
