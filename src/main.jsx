@@ -18,6 +18,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import SpotDetails from './components/SpotDetails/SpotDetails.jsx';
 import Update from './components/Update/Update.jsx';
 import TouristSpots from './components/TouristSpots/TouristSpots.jsx';
+import CountryInfo from './components/Countries/CountryInfo.jsx';
 
 
 const router = createBrowserRouter([
@@ -65,7 +66,17 @@ const router = createBrowserRouter([
         path:'/touristspots',
         element:<TouristSpots></TouristSpots>,
         loader: ()=> fetch('http://localhost:5000/spots')
-      }
+      },
+      {
+        path:'/country/:country',
+        element:<CountryInfo></CountryInfo>,
+        loader: () => fetch('http://localhost:5000/country')
+      },
+      // {
+      //   path:'/country/:country',
+      //   element:<CountryInfo></CountryInfo>,
+      //   loader: ({params})=> fetch(`http://localhost:5000/spots/${params.country}`)
+      // }
     ]
   },
 ]);

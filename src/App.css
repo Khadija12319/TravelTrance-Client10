@@ -21,26 +21,35 @@
   object-fit: cover;
 }
 
-body[data-aos-delay='3800'] [data-aos], [data-aos][data-aos][data-aos-delay='3800']{
-  transition-delay: 3800ms;
+body[data-aos-delay='3400'] [data-aos], [data-aos][data-aos][data-aos-delay='3400']{
+  transition-delay: 3400ms;
+  }
+body[data-aos-delay='3700'] [data-aos], [data-aos][data-aos][data-aos-delay='3700']{
+    transition-delay: 3700ms;
   }
 body[data-aos-delay='4000'] [data-aos], [data-aos][data-aos][data-aos-delay='4000']{
-    transition-delay: 4000ms;
+      transition-delay: 4000ms;
+  }
+
+  body[data-aos-delay='6400'] [data-aos], [data-aos][data-aos][data-aos-delay='6400']{
+    transition-delay: 6400ms;
     }
-body[data-aos-delay='4200'] [data-aos], [data-aos][data-aos][data-aos-delay='4200']{
-      transition-delay: 4200ms;
-      }
+  body[data-aos-delay='6700'] [data-aos], [data-aos][data-aos][data-aos-delay='6700']{
+      transition-delay: 6700ms;
+    }
+  body[data-aos-delay='7000'] [data-aos], [data-aos][data-aos][data-aos-delay='7000']{
+        transition-delay: 6600ms;
+    }
 
-
-body[data-aos-delay='5900'] [data-aos], [data-aos][data-aos][data-aos-delay='5900']{
-        transition-delay: 5900ms;
+body[data-aos-delay='9400'] [data-aos], [data-aos][data-aos][data-aos-delay='9400']{
+        transition-delay: 9400ms;
         }
 
-body[data-aos-delay='6100'] [data-aos], [data-aos][data-aos][data-aos-delay='6100']{
-          transition-delay: 6100ms;
+body[data-aos-delay='9700'] [data-aos], [data-aos][data-aos][data-aos-delay='9700']{
+          transition-delay: 9700ms;
           }
-  body[data-aos-delay='6300'] [data-aos], [data-aos][data-aos][data-aos-delay='6300']{
-            transition-delay: 6300ms;
+  body[data-aos-delay='10000'] [data-aos], [data-aos][data-aos][data-aos-delay='10000']{
+            transition-delay: 10000ms;
             }
 
  .footer-background{

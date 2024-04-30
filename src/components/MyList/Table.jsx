@@ -56,7 +56,9 @@ const Table = ({ spot, spots, setSpots }) => {
   };
 
   Table.propTypes = {
-    spot:PropTypes.array
+    spot:PropTypes.array,
+    spots:PropTypes.array,
+    setSpots: PropTypes.func
   }
   
   export default Table;

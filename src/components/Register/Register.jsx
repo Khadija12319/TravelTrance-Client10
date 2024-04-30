@@ -136,7 +136,7 @@ const Register = () => {
                         <span className="label-text text-lg">Password</span>
                     </label>
                     <input type={showPassword ? "text" : "password"} name="password" placeholder="password" className="input input-bordered py-7" required />
-                    <span onClick={ () => setShowPassword(!showPassword)} className="md:translate-x-[93%] translate-x-[85%] -translate-y-[40px] text-2xl">{showPassword? <IoEyeOff /> : <IoEye/>}</span>
+                    <span onClick={ () => setShowPassword(!showPassword)} className="md:translate-x-[93%] translate-x-[85%] -translate-y-[40px] text-2xl">{showPassword? <IoEyeOff className="text-orange-600"/> : <IoEye className="text-orange-600"/>}</span>
                     {
                         registerError && <p className="text-red-500">{registerError}</p>
                     }
@@ -145,7 +145,7 @@ const Register = () => {
                     </label>
                     </div>
                     <div className="form-control mt-6">
-                    <button className="btn bg-[#DD6B20] text-white hover:text-black text-xl mb-4">Register</button>
+                    <button className="btn bg-orange-200 text-black hover:text-black text-xl mb-4">Register</button>
                     </div>
                     <div className="mb-4">
                         <p className="text-center">Already have an account? <Link to='/login' className="text-[#DD6B20] underline">Login now</Link></p>

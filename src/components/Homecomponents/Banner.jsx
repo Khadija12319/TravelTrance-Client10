@@ -46,7 +46,7 @@ const Banner = () => {
             clickable: true,
         }}
         autoplay={{
-            delay: 1500,
+            delay: 3000,
             disableOnInteraction: false,
           }}
         modules={[Pagination, Autoplay]}
@@ -65,27 +65,27 @@ const Banner = () => {
                 <SwiperSlide style={{ backgroundImage: `url(${banner[1].image})`,backgroundPosition:"center",backgroundSize:"cover", height:"600px"}} className='bg-no-repeat'>
                 <div className='flex justify-center items-center flex-col h-[100%] bg-gradient-to-br from-blue-700 via-transparent to-transparent bg-opacity-25'>
                     <div className='space-y-4'>
-                        <h2 className='font-montserrat text-white text-6xl font-bold' data-aos="fade-up" data-aos-delay="1700">{banner[1].title}</h2>
-                        <p className='text-white font-playfair text-3xl font-semibold' data-aos="fade-up" data-aos-delay="1900">{banner[1].description}</p>
-                        <button className='text-white font-montserrat bg-orange-600 px-5 py-3 font-bold rounded-lg outline-none' data-aos="fade-up" data-aos-delay="2100">{banner[1].button}</button>
+                        <h2 className='font-montserrat text-white text-6xl font-bold' data-aos="fade-up" data-aos-delay="3400">{banner[1].title}</h2>
+                        <p className='text-white font-playfair text-3xl font-semibold' data-aos="fade-up" data-aos-delay="3700">{banner[1].description}</p>
+                        <button className='text-white font-montserrat bg-orange-600 px-5 py-3 font-bold rounded-lg outline-none' data-aos="fade-up" data-aos-delay="4000">{banner[1].button}</button>
                     </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundImage: `url(${banner[2].image})`,backgroundPosition:"center",backgroundSize:"cover", height:"600px"}} className='bg-no-repeat'>
             <div className='flex justify-center items-center flex-col h-[100%] bg-gradient-to-br from-blue-700 via-transparent to-transparent bg-opacity-25'>
                 <div className='space-y-4'>
-                    <h2 className='font-montserrat text-white text-6xl font-bold' data-aos="fade-up" data-aos-delay="3800">{banner[2].title}</h2>
-                    <p className='text-white font-playfair text-3xl font-semibold' data-aos="fade-up" data-aos-delay="4000">{banner[2].description}</p>
-                    <button className='text-white font-montserrat bg-orange-600 px-5 py-3 font-bold rounded-lg outline-none' data-aos="fade-up" data-aos-delay="4200">{banner[2].button}</button>
+                    <h2 className='font-montserrat text-white text-6xl font-bold' data-aos="fade-up" data-aos-delay="6400">{banner[2].title}</h2>
+                    <p className='text-white font-playfair text-3xl font-semibold' data-aos="fade-up" data-aos-delay="6700">{banner[2].description}</p>
+                    <button className='text-white font-montserrat bg-orange-600 px-5 py-3 font-bold rounded-lg outline-none' data-aos="fade-up" data-aos-delay="7000">{banner[2].button}</button>
                 </div>
             </div>
         </SwiperSlide>
         <SwiperSlide style={{ backgroundImage: `url(${banner[3].image})`,backgroundPosition:"center",backgroundSize:"cover", height:"600px"}} className='bg-no-repeat'>
         <div className='flex justify-center items-center flex-col h-[100%] bg-gradient-to-br from-blue-700 via-transparent to-transparent bg-opacity-25'>
             <div className='space-y-4'>
-                <h2 className='font-montserrat text-white text-6xl font-bold' data-aos="fade-up" data-aos-delay="5900">{banner[3].title}</h2>
-                <p className='text-white font-playfair text-3xl font-semibold' data-aos="fade-up" data-aos-delay="6100">{banner[3].description}</p>
-                <button className='text-white font-montserrat bg-orange-600 px-5 py-3 font-bold rounded-lg outline-none' data-aos="fade-up" data-aos-delay="6300">{banner[3].button}</button>
+                <h2 className='font-montserrat text-white text-6xl font-bold' data-aos="fade-up" data-aos-delay="9400">{banner[3].title}</h2>
+                <p className='text-white font-playfair text-3xl font-semibold' data-aos="fade-up" data-aos-delay="9700">{banner[3].description}</p>
+                <button className='text-white font-montserrat bg-orange-600 px-5 py-3 font-bold rounded-lg outline-none' data-aos="fade-up" data-aos-delay="10000">{banner[3].button}</button>
             </div>
         </div>
     </SwiperSlide>        

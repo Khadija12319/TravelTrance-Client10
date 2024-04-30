@@ -37,7 +37,6 @@ const Update = () => {
                     icon: 'success',
                     confirmButtonText: 'Ok'
                   })
-                  form.reset();
             }
         })
      }
@@ -103,7 +102,7 @@ const Update = () => {
                         </div>
                         <div className="flex flex-col gap-4 w-full">
                             <label className="text-[#1B1A1A80] font-raleway font-semibold leading-8 text-xl">Visitor/Year</label>
-                            <input defaultValue={visitor} className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="number" name="visitor" id="" placeholder="Enter visitor per year"/>
+                            <input defaultValue={visitor} min="1" max="1000000000000000000000000000000000000000000000000000000000000000000" className="p-3 placeholder:text-[#1B1A1A80] placeholder:text-base placeholder:font-normal placeholder:leading-7 rounded-md" type="number" name="visitor" id="" placeholder="Enter visitor per year"/>
                         </div>
                     </div>
 

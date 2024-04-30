@@ -43,7 +43,7 @@ const NavBar = () => {
   const navEnd =<>
             <div className="relative inline-block text-left">
             <div>
-            <button type="button" onClick={toggleDropdown} className="inline-flex w-full justify-center gap-x-1.5 bg-white px-3 py-2 text-sm font-semibold text-gray-900 tooltip tooltip-success tooltip-left dark:bg-transparent" id="menu-button" aria-expanded="true" aria-haspopup="true" data-tip={user?.displayName}>
+            <button type="button" onClick={toggleDropdown} className="inline-flex w-full justify-center gap-x-1.5 bg-white px-3 py-2 text-sm font-semibold text-gray-900 tooltip tooltip-left dark:bg-transparent" id="menu-button" aria-expanded="true" aria-haspopup="true" data-tip={user?.displayName}>
             { user?.photoURL ? (
                     <img src={user?.photoURL} className="h-16 w-16 rounded-full dark:bg-transparent" alt="User Profile" />
                     ) : (
