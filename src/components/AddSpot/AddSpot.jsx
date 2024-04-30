@@ -23,7 +23,7 @@ const AddSpot = () => {
 
         console.log(formdata);
         
-        fetch('http://localhost:5000/spots',{
+        fetch('https://assignment-10-server-wheat-seven.vercel.app/spots',{
             method:"POST",
             headers:{
                 "content-type": "application/json"

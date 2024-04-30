@@ -7,7 +7,7 @@ const Spots = () => {
     const {loading} =useContext(AuthContext);
     useEffect(() => {
         if (!loading) {
-            fetch('http://localhost:5000/spots')
+            fetch('https://assignment-10-server-wheat-seven.vercel.app/spots')
                 .then(res => res.json())
                 .then(data => setSpots(data));
         }

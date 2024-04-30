@@ -19,7 +19,7 @@ const Table = ({ spot, spots, setSpots }) => {
       confirmButtonText:'Yes, delete it!'
     }).then((result) => {
       if(result.isConfirmed){
-        fetch(`http://localhost:5000/spots/${_id}`,{
+        fetch(`https://assignment-10-server-wheat-seven.vercel.app/spots/${_id}`,{
           method:'DELETE'
         })
         .then(res => res.json())

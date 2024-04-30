@@ -21,7 +21,7 @@ const Update = () => {
 
         console.log(formdata);
         
-        fetch(`http://localhost:5000/spots/${_id}`,{
+        fetch(`https://assignment-10-server-wheat-seven.vercel.app/spots/${_id}`,{
             method:"PUT",
             headers:{
                 "content-type": "application/json"

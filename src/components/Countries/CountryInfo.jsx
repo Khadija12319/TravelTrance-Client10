@@ -20,7 +20,7 @@ const CountryInfo = () => {
 
         useEffect(() => {
             const fetchData = async () => {
-                const response = await fetch("http://localhost:5000/spots");
+                const response = await fetch("https://assignment-10-server-wheat-seven.vercel.app/spots");
                 const data = await response.json();
                 const filteredSpots = data.filter(spot => spot.countryname === country);
                 setSpots(filteredSpots);

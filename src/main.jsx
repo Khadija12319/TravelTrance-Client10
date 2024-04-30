@@ -50,32 +50,32 @@ const router = createBrowserRouter([
       {
         path:'/mylist',
         element:<PrivateRoute><MyList></MyList></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/spots')
+        loader: ()=> fetch('https://assignment-10-server-wheat-seven.vercel.app/spots')
       },
       {
         path:'/spot/:id',
         element:<PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+        loader: ({params})=> fetch(`https://assignment-10-server-wheat-seven.vercel.app/spots/${params.id}`)
       },
       {
         path:'/updatespot/:id',
         element:<Update></Update>,
-        loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+        loader: ({params})=> fetch(`https://assignment-10-server-wheat-seven.vercel.app/spots/${params.id}`)
       },
       {
         path:'/touristspots',
         element:<TouristSpots></TouristSpots>,
-        loader: ()=> fetch('http://localhost:5000/spots')
+        loader: ()=> fetch('https://assignment-10-server-wheat-seven.vercel.app/spots')
       },
       {
         path:'/country/:country',
         element:<CountryInfo></CountryInfo>,
-        loader: () => fetch('http://localhost:5000/country')
+        loader: () => fetch('https://assignment-10-server-wheat-seven.vercel.app/country')
       },
       // {
       //   path:'/country/:country',
       //   element:<CountryInfo></CountryInfo>,
-      //   loader: ({params})=> fetch(`http://localhost:5000/spots/${params.country}`)
+      //   loader: ({params})=> fetch(`https://assignment-10-server-wheat-seven.vercel.app/spots/${params.country}`)
       // }
     ]
   },

@@ -8,7 +8,7 @@ const Countries = () => {
     const {loading} =useContext(AuthContext);
     useEffect(() => {
         if (!loading) {
-            fetch('http://localhost:5000/country')
+            fetch('https://assignment-10-server-wheat-seven.vercel.app/country')
                 .then(res => res.json())
                 .then(data => setCountries(data));
         }
